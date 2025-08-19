@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Prehistoric Open World (Prototype)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="overlay">
+    <h1>Prehistoric Open World</h1>
+    <p>
+      Desktop: <b>Click</b> to lock mouse • <b>WASD</b> move • <b>Space</b> jump • <b>Shift</b> sprint • <b>T</b> tech<br/>
+      <b>C</b> throw spear • <b>X</b> shoot bow • <b>F</b> place campfire<br/>
+      Mobile: Left stick = move • Right drag = look • Tap ⤴ to jump • Tap 🗡 to throw • Tap 🏹 to shoot • Tap 🔥 to place • Tap 🧠 for tech
+    </p>
+    <button id="startBtn">Start</button>
+  </div>
+
+  <div id="hud">
+    <div id="health"><span id="hpBar"></span></div>
+    <div id="inv">
+      Stones: <span id="stoneCount">0</span> | Wood: <span id="woodCount">0</span> | Tech: <span id="techCount">0</span>
+    </div>
+    <button id="openTechBtn" title="Tech (T)">🧠</button>
+  </div>
+
+  <!-- Tech menu -->
+  <div id="techMenu" class="panel hidden">
+    <div class="panelInner">
+      <h2>Tech & Crafting</h2>
+      <p>Earn <b>Tech</b> by defeating dinos. Gather <b>Stones</b> & <b>Wood</b> on the ground.</p>
+      <div class="grid">
+        <button id="unlockSpear" class="card">
+          <h3>Stone Spear</h3>
+          <p>Enable spear throwing (C / 🗡)</p>
+          <code>Cost: 2 Tech, 3 Stone, 2 Wood</code>
+        </button>
+        <button id="unlockBow" class="card">
+          <h3>Simple Bow</h3>
+          <p>Enable bow shooting (X / 🏹)</p>
+          <code>Cost: 3 Tech, 2 Stone, 4 Wood</code>
+        </button>
+        <button id="unlockCamp" class="card">
+          <h3>Campfire</h3>
+          <p>Place a healing campfire (F / 🔥)</p>
+          <code>Cost: 1 Tech, 1 Stone, 3 Wood</code>
+        </button>
+      </div>
+      <button id="closeTech" class="close">Close (T)</button>
+    </div>
+  </div>
+
+  <!-- Mobile controls -->
+  <div id="mobileControls">
+    <div id="leftStick">
+      <div class="base"></div>
+      <div class="stick"></div>
+    </div>
+    <div id="rightLook"></div>
+    <button id="jumpBtn">⤴</button>
+    <button id="throwBtn">🗡</button>
+    <button id="bowBtn">🏹</button>
+    <button id="campBtn">🔥</button>
+    <button id="techBtn">🧠</button>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
